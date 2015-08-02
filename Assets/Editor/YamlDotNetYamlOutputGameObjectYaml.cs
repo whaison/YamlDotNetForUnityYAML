@@ -68,7 +68,8 @@ public class YamlDotNetYamlOutputGameObjectYaml : EditorWindow {
 
 
 		TextWriter textWriter = new StreamWriter(Application.dataPath + "/Editor/YamlDotNetYamlOutputGameObject_yaml.yaml");
-		//YAMLにシリアライズしてコンソールに表示
+		textWriter.WriteLine("%YAML1.1");//無視される。
+		textWriter.WriteLine("%TAG !u! tag:unity3d.com,2011:");//無視される。
 		//var serializer = new Serializer();
 		YamlDotNet.Serialization.Serializer serializer = new YamlDotNet.Serialization.Serializer();
 		/// ※↑でSerializerが存在しないと怒られたら以下ので Genericsを書かないと空のYAMLになるので注意
@@ -79,7 +80,7 @@ public class YamlDotNetYamlOutputGameObjectYaml : EditorWindow {
 		// don't forget Close()
 		textWriter.Close();
 		AssetDatabase.Refresh();
-		//Console.Read();
+	
 	}
 	// Use this for initialization
 

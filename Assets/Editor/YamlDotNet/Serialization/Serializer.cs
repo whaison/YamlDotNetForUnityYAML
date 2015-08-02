@@ -146,7 +146,7 @@ namespace YamlDotNet.Serialization
 			emitter.Emit(new DocumentStart());
 
 			traversalStrategy.Traverse(graph, emittingVisitor);
-			Debug.Log("class Serializer    traversalStrategy.Traverse(graph: "+graph+", emittingVisitor: "+emittingVisitor+")");
+			Debug.Log("class Serializer  EmitDocument  traversalStrategy.Traverse(graph: "+graph+", emittingVisitor: "+emittingVisitor+")");
 
 			emitter.Emit(new DocumentEnd(true));
 			emitter.Emit(new StreamEnd());
