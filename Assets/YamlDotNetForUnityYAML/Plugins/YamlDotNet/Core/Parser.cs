@@ -467,18 +467,14 @@ namespace YamlDotNet.Core
 				else if (tagDirectives.Contains(tag.Handle))
 				{
 					tagName = string.Concat(tagDirectives[tag.Handle].Prefix, tag.Suffix);
-					UnityEngine.Debug.Log("tag.Handle="+tag.Handle +"tagDirectives[tag.Handle].Prefix="+tagDirectives[tag.Handle].Prefix+"tag.Suffix="+tag.Suffix);
-
 					UnityEngine.Debug.Log("02:tagName="+tagName);
 				}
 				else
 				{
 					//throw new SemanticErrorException(tag.Start, tag.End, "While parsing a node, find undefined tag handle.");
-					UnityEngine.Debug.Log("SemanticErrorException(tag.Start="+tag.Start+", tag.End="+ tag.End+","+ "While parsing a node, find undefined tag handle.");
-					UnityEngine.Debug.Log("tag.Handle="+tag.Handle +"tag.Suffix="+tag.Suffix);
-					tagName =tag.Handle +tag.Suffix;
+					UnityEngine.Debug.Log("SemanticErrorException(tag.Start="+tag.Start+", tag.End="+tag.End+",  While parsing a node, find undefined tag handle.");
+					tagName = tag.Handle+tag.Suffix;
 					UnityEngine.Debug.Log("03:tagName="+tagName);
-
 				}
 			}
 			if (string.IsNullOrEmpty(tagName))
