@@ -80,7 +80,15 @@ public class YamlDotNetYamlOutputGameObjectYaml : EditorWindow {
 		// don't forget Close()
 		textWriter.Close();
 		AssetDatabase.Refresh();
-	
+		//間の!U!タグを入れるために
+		//TO 3ファイルつくって合成させる 荒技でいける気がする。めんどくさいのでリードの方からセーブしてみる。
+		//%YAML1.1
+		//!u!4 &12345
+		//GamObject クラス
+		//!u!4 &12345
+		//Transform クラス
+		//!u!4 &12345
+		//Prefab クラス
 	}
 	// Use this for initialization
 

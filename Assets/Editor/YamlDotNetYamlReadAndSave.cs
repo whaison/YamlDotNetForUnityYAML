@@ -12,7 +12,7 @@ using YamlDotNet.RepresentationModel;
 using YamlDotNet.Serialization;
 
 
-public class YamlDotNetYamlReader : EditorWindow {
+public class YamlDotNetYamlReadAndSave : EditorWindow {
 
 	UnityEngine.Object textAsset;
 	GameObject prefabAsset;
@@ -20,7 +20,7 @@ public class YamlDotNetYamlReader : EditorWindow {
 	void OnGUI ()
 	{
 
-		GUILayout.Label ("YamlDotNetYamlReader", EditorStyles.boldLabel);
+		GUILayout.Label ("YamlDotNetYamlReadAndSave", EditorStyles.boldLabel);
 
 		GUILayout.Space (10f);
 		textAsset = EditorGUILayout.ObjectField ("YAML Object", textAsset, typeof(UnityEngine.Object), false) as UnityEngine.Object;
@@ -38,7 +38,7 @@ public class YamlDotNetYamlReader : EditorWindow {
 
 
 		GUILayout.Space (20f);
-		if (GUILayout.Button ("YamlDotNetYamlReader", GUILayout.Width (300f))) {
+		if (GUILayout.Button ("YamlDotNetYamlReadAndSave", GUILayout.Width (300f))) {
 			YamlDotNetYamlRead();
 		}
 
@@ -77,6 +77,13 @@ public class YamlDotNetYamlReader : EditorWindow {
 			//}
 			
 		}
+		TextWriter textWriter = new StreamWriter(Application.dataPath + "/Editor/YamlDotNetYamlReadAndSave_yaml.yaml");
+		textWriter.WriteLine("%YAML 1.1");//無視される。
+		textWriter.WriteLine("%TAG !u! tag:unity3d.com,2011:");//無視される。
+		yaml.Save(textWriter);
+
+		textWriter.Close();
+		AssetDatabase.Refresh();
 		//var Year = (YamlScalarNode)mapping.Children[new YamlScalarNode("Year")];
 		//Debug.Log("Year "+ Year.Value);
 		//var Description = (YamlScalarNode)mapping.Children[new YamlScalarNode("Description")];
@@ -104,10 +111,10 @@ public class YamlDotNetYamlReader : EditorWindow {
 	/// <summary>
 	/// Open the tool window
 	/// </summary>
-	[MenuItem("Tools/GameObject/YamlDotNetYamlReader")]
-	static public void OpenWindow13 ()
+	[MenuItem("Tools/GameObject/YamlDotNetYamlReadAndSave")]
+	static public void OpenWindow14 ()
 	{
-		EditorWindow.GetWindow<YamlDotNetYamlReader> (true, "YamlDotNetYamlReader", true);
+		EditorWindow.GetWindow<YamlDotNetYamlReadAndSave> (true, "YamlDotNetYamlReadAndSave", true);
 	}
 	#endregion
 }

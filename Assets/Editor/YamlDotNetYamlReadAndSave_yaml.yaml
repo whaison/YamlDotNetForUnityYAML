@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+&155670
+&2032101990 GameObject:
+  m_ObjectHideFlags: &30656986 0
+  m_PrefabParentObject: &1062972585
+    &104934315 fileID: 0
+  m_PrefabInternal:
+    fileID: 100100000
+  serializedVersion: &1278308672 4
+  m_Component:
+  - 4:
+      fileID: 430012
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon:
+    fileID: 0
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+...
+--- &430012
+Transform:
+  m_ObjectHideFlags: &1689005307 1
+  m_PrefabParentObject: &498649214
+    &1378139938 fileID: &1114300606 0
+  m_PrefabInternal:
+    fileID: 100100000
+  m_GameObject:
+    fileID: 155670
+  m_LocalRotation:
+    &2052234437 x: 0
+    &1869903179 y: 0
+    &1367074348 z: 0
+    w: 1
+  m_LocalPosition:
+    x: 0
+    y: 0
+    z: 0
+  m_LocalScale:
+    x: 1
+    y: 1
+    z: 1
+  m_Children: []
+  m_Father:
+    fileID: 0
+  m_RootOrder: 0
+...
+--- &100100000
+Prefab:
+  m_ObjectHideFlags: &960638938 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: &812506319
+      &1673658058 fileID: &462330448 0
+    m_Modifications: &1286112070 []
+    m_RemovedComponents: []
+  m_ParentPrefab:
+    fileID: 0
+  m_RootGameObject:
+    fileID: 155670
+  m_IsPrefabParent: 1
+...
