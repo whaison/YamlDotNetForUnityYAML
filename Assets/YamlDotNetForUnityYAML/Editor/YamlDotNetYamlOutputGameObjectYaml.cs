@@ -67,7 +67,7 @@ public class YamlDotNetYamlOutputGameObjectYaml : EditorWindow {
             });
 
 
-		TextWriter textWriter = new StreamWriter(Application.dataPath + "/Editor/YamlDotNetYamlOutputGameObject_yaml.yaml");
+		TextWriter textWriter = new StreamWriter(Application.dataPath + "/YamlDotNetForUnityYAML/Editor/YamlDotNetYamlOutputGameObject_yaml.yaml");
 		textWriter.WriteLine("%YAML1.1");//無視される。
 		textWriter.WriteLine("%TAG !u! tag:unity3d.com,2011:");//無視される。
 		//var serializer = new Serializer();

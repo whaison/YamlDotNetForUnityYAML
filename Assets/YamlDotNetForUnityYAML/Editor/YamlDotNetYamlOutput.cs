@@ -93,7 +93,7 @@ public class YamlDotNetYamlOutput : EditorWindow {
             });
 
 
-		TextWriter textWriter = new StreamWriter(Application.dataPath + "/Editor/YamlDotNetYamlOutput_yaml.yaml");
+		TextWriter textWriter = new StreamWriter(Application.dataPath + "/YamlDotNetForUnityYAML/Editor/YamlDotNetYamlOutput_yaml.yaml");
 		//YAMLにシリアライズしてコンソールに表示
 		//var serializer = new Serializer();
 		YamlDotNet.Serialization.Serializer serializer = new YamlDotNet.Serialization.Serializer();
