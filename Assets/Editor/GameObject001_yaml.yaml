@@ -1,15 +1,40 @@
-Year: 2012-12-01T00:00:00.0000000
-Description: C# Advent Calender 2012
-Contents:
-- Day: 1
-  Author: gushwell
-  Description: ".NET Framework4.5 での非同期I/O処理 事始め"
-  URL: http://gushwell.ldblog.jp/archives/52290230.html
-- Day: 2
-  Author: KTZ
-  Description: "年末の大掃除"
-  URL: http://ritalin.github.com/2012/12-02/csharp-advent-2012/
-- Day: 3
-  Author: neuecc
-  Description: "MemcachedTranscoder – C#のMemcached用シリアライザライブラリ"
-  URL: http://neue.cc/2012/12/03_389.html
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &155670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 430012}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &430012
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155670}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 155670}
+  m_IsPrefabParent: 1
