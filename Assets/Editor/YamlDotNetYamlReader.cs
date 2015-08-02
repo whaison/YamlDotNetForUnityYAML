@@ -54,7 +54,7 @@ public class YamlDotNetYamlReader : EditorWindow {
 		var input = new StreamReader(fileName, Encoding.UTF8);
 		var yaml = new YamlStream();
 		yaml.Load(input);
-		var mapping = (YamlMappingNode)yaml.Documents[0].RootNode;
+		//var mapping = (YamlMappingNode)yaml.Documents[0].RootNode;
 		Debug.Log("yaml.Documents.Count="+ yaml.Documents.Count);
 		//foreach (YamlMappingNode item in (YamlMappingNode)yaml.Documents) {
 		for(int i = 0; i < yaml.Documents.Count; i++){
